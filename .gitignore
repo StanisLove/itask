@@ -1,0 +1,13 @@
+/.bundle
+/log/*
+!/log/.keep
+/tmp
+
+.rspec
+/db/structure.sql
+config/database.yml
+config/secrets.yml
+
+/public/assets
+.DS_Store
+/.idea

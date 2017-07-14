@@ -1,0 +1,22 @@
+development:
+  adapter: postgresql
+  host: localhost
+  database: itask_dev
+  username: itask
+  password: itask
+
+
+test:
+  database: itask_test
+  adapter: postgresql
+  host: localhost
+  database: itask_dev
+  username: itask
+  password: itask
+
+production:
+  adapter: postgresql
+  host: localhost
+  database: itask
+  username: itask
+  passowrd: itask
