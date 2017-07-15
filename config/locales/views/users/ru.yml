@@ -1,0 +1,4 @@
+en:
+  users:
+    errors:
+      email_not_uniqueness: " - данный email уже зарегистрирован. Сначала авторизуйтесь."

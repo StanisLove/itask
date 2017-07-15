@@ -1,6 +1,7 @@
-en:
+ru:
   activerecord:
     errors: &errors
       format: ! '%{attribute} %{message}'
       messages:
-        email: is not a valid email
+        email: не корректный
+

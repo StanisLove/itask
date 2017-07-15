@@ -23,7 +23,8 @@ gem 'carrierwave'
 gem 'aasm'
 gem 'simple_form'
 
-# gem 'bcrypt', '~> 3.1.7'
+ gem 'bcrypt', '~> 3.1.7'
+
 # gem 'unicorn'
 # gem 'capistrano-rails', group: :development
 
@@ -32,7 +33,6 @@ gem 'nenv', '~> 0.1'
 
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'faker'
   gem 'timecop'
