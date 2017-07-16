@@ -1,0 +1,23 @@
+<% if flash[:notice] %>
+  $('.notice-content').append('<div></div>')
+  $('.notice-content div').addClass('notice message success text-center')
+  $('.notice-content div').append("<%= flash[:notice] %>").fadeOut(3000);
+<% end %>
+
+<% if flash[:alert] %>
+  $('.notice-content').append('<div></div>')
+  $('.notice-content div').addClass('notice message error text-center')
+  $('.notice-content div').append("<%= flash[:alert] %>").fadeOut(3000);
+<% end %>
+
+$('.form-group').removeClass('has-error');
+$('.form-group input').attr('placeholder', '');
+<% if target.errors.present? %>
+  <% target.errors.messages.each do |key, value| %>
+    <% field = "#{form_id} .form-group.#{selector}_#{key}" %>
+    $('<%= field %>').addClass('has-error');
+    $('<%= field %> input').val('');
+    $('<%= field %> input').attr('placeholder', '<%= value.first %>');
+  <% end %>
+<% end %>
+

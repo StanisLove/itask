@@ -8,9 +8,9 @@ gem 'slim-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'therubyracer'
-gem 'less-rails'
-gem 'twitter-bootstrap-rails'
 gem 'sprockets', '3.6.3'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'autoprefixer-rails'
 
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -23,7 +23,8 @@ gem 'carrierwave'
 gem 'aasm'
 gem 'simple_form'
 
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+
 # gem 'unicorn'
 # gem 'capistrano-rails', group: :development
 
@@ -32,7 +33,6 @@ gem 'nenv', '~> 0.1'
 
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'faker'
   gem 'timecop'

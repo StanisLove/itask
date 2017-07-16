@@ -40,9 +40,9 @@ RSpec.configure do |config|
   # config.extend WithModel
   # config.extend TbHelper
   # config.extend PolicyHelper, type: :policy
-  config.extend ControllerHelper, type: :request
-  config.extend ControllerHelper, type: :controller
-  config.extend EndpointHelpers, type: :request
+  # config.extend ControllerHelper, type: :request
+  # config.extend ControllerHelper, type: :controller
+  # config.extend EndpointHelpers, type: :request
 
   config.filter_run_excluding(regression: true) unless ENV['R'].present?
   # config.filter_run_excluding(type: :feature) unless ENV['F'].present? ||

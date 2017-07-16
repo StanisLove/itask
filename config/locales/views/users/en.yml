@@ -1,0 +1,7 @@
+en:
+  users:
+    errors:
+      email_not_uniqueness: Email not unique
+    btn:
+      login: Login
+      register: Register

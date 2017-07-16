@@ -1,0 +1,23 @@
+doctype html
+html lang="#{I18n.locale}"
+  head
+    title iTask
+    meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" charset="UTF-8"
+    = favicon_link_tag '/favicon.ico'
+    = stylesheet_link_tag "starting", media: "all"
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
+  body
+    .main.custom-login
+      .notice-content
+        - if flash[:notice]
+          .notice.success
+            .message = flash[:notice]
+        - if flash[:alert]
+          .notice.error
+            .message = flash[:alert]
+
+      = yield
+
+    = javascript_include_tag "notice"
+    = yield :scripts
