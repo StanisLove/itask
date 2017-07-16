@@ -1,0 +1,19 @@
+- login ||= !signup
+- signup ||= !login
+
+.form-wrapper#signup-form style=('display:none' if login)
+  h1.title = t('users.registration')
+  = simple_form_for :user, url: post_user_path, remote: true, authenticity_token: true do |f|
+    = f.input :email, label: t('users.email')
+    = f.input :password, label: t('users.password')
+    = f.input :password_confirmation,label: t('users.password_confirmation'), required: true
+    = f.submit t('users.btn.register'), class: 'btn btn-primary btn-sm'
+    = link_to t('users.login'), 'javascript:;', id: 'login-link'
+
+.form-wrapper#login-form style=('display:none' if signup)
+  h1.title = t('users.login')
+  = simple_form_for :login_form, url: login_path, remote: true, authenticity_token: true do |f|
+    = f.input :email, label: t('users.email')
+    = f.input :password, label: t('users.password')
+    = f.submit t('users.btn.login'), class: 'btn btn-primary btn-sm'
+    = link_to t('users.signup'), 'javascript:;', id: 'signup-link'

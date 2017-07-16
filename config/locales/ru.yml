@@ -4,4 +4,26 @@ ru:
       format: ! '%{attribute} %{message}'
       messages:
         email: не корректный
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: обязательно для заполнения
+            password:
+              blank: обязательно для заполнения
+              too_short: 'не менее 6 символов'
+            email:
+              blank: обязательно для заполнения
+  activemodel:
+    errors:
+      models:
+        user_login_form:
+          attributes:
+            password:
+              blank: обязательно для заполнения
+              too_short: 'не менее 6 символов'
+            email:
+              blank: обязательно для заполнения
+  http_erro:
+    unauthorized: Неавторизован
 

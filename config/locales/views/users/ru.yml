@@ -1,4 +1,15 @@
-en:
+ru:
   users:
     errors:
-      email_not_uniqueness: " - данный email уже зарегистрирован. Сначала авторизуйтесь."
+      email_not_uniqueness: Данный email уже зарегистрирован
+      message:
+        wrong_email_or_password: Неверные почта или пароль
+    btn:
+      login: Вход
+      register: Регистрация
+    registration: Регистрация
+    signup: Регистрация
+    login: Вход
+    email: Email
+    password: Пароль
+    password_confirmation: Подтверждение пароля
