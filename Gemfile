@@ -20,6 +20,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma', '~>3.8'
 
 gem 'carrierwave'
+gem 'cocoon'
+gem 'mini_magick'
 gem 'aasm'
 gem 'simple_form'
 
@@ -30,6 +32,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 # for environment variables
 gem 'nenv', '~> 0.1'
+
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 
 group :development, :test do
   gem 'byebug'

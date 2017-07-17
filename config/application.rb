@@ -24,6 +24,8 @@ module Itask
 
     config.autoload_paths += %W(#{config.root}/app/forms/)
 
+    config.active_record.raise_in_transactional_callbacks = true
+
     if Rails.env.development?
       console do
         require "pry"

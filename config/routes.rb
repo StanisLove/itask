@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   match '/login', to: 'user_sessions#create', via: :post
   match '/logout', to: 'user_sessions#destroy', via: :get
 
-  resources :tasks, only: [:new, :create, :update, :destroy]
+  resources :tasks, only: [:new, :create, :update, :destroy] do
+    post :change_state, on: :member
+    post :upload_file, on: :member
+  end
 end

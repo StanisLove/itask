@@ -1,0 +1,9 @@
+ru:
+  tasks:
+    title: Задачи
+    new: Создать задачу
+    name: Название задачи
+    description: Описание задачи
+    hide_form: Убрать форму
+    btn:
+      add: Добавить
