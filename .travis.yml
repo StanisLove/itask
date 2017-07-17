@@ -1,0 +1,30 @@
+language: ruby
+rvm:
+  - 2.3.3
+notifications:
+  email: false
+
+branches:
+  except:
+    - production
+
+addons:
+  postgresql: "9.4"
+
+bundler_args: --without development --deployment --jobs=3 --retry=3
+cache: bundler
+
+before_script:
+  - psql -c 'create database itask_test;' -U postgres
+  - cp config/database.travis.yml config/database.yml
+  - cp config/secrets.travis.yml config/secrets.yml
+  - mkdir -p tmp/cache
+  - bundle exec rake db:migrate
+  - bundle exec rake db:setup
+  - sleep 5
+
+script:
+  - bundle exec rspec
+
+gemfile:
+  - Gemfile

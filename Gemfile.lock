@@ -317,6 +317,7 @@ DEPENDENCIES
   puma (~> 3.8)
   rails (~> 4.2.0)
   rails_12factor
+  rake
   rspec (~> 3.4)
   rspec-rails (~> 3.4)
   rubocop (= 0.29.1)
