@@ -1,6 +1,6 @@
 h1= t('tasks.title')
-= link_to t('tasks.new'), 'javascript:;', class: 'new-task-link'
-= link_to t('tasks.hide_form'), 'javascript:;', class: 'away-task-form', style: 'display:none'
+= link_to t('tasks.new'), 'javascript:;', class: 'new-task-link', 'data-no-turbolink' => true
+= link_to t('tasks.hide_form'), 'javascript:;', class: 'away-task-form', style: 'display:none', 'data-no-turbolink' => true
 
 == render 'tasks/form'
 

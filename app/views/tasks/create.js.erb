@@ -1,3 +1,5 @@
 $('tbody').prepend('<%=j render partial: "task", locals: { task: @task } %>');
 $('#task-form form')[0].reset();
-$('#task-form').hide();
+$("#task-form").toggle()
+$(".new-task-link").toggle()
+$(".away-task-form").toggle()

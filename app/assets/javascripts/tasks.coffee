@@ -12,10 +12,10 @@ ready = ->
     $(".away-task-form").toggle()
 
   $(".upload").click (e) ->
-    e.currentTarget.parentElement.getElementsByClassName('upload-input')[0].click()
+    input = e.currentTarget.parentElement.getElementsByClassName('upload-input')[0]
+    input.click()
 
 
 $(document).ready(ready)
-$(document).on('turbolinks:load', ready)
 $(document).on('page:load', ready)
 $(document).on('page:update', ready)

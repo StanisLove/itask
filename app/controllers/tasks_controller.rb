@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:edit, :update, :change_state, :destroy]
+  before_action :set_task, only: [:upload_file, :edit, :update, :change_state, :destroy]
 
   def index
     @tasks = current_user.tasks.order(:created_at).page(params[:page])
@@ -8,10 +8,7 @@ class TasksController < ApplicationController
 
   def create
     @task = current_user.tasks.create(task_params)
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    respond_to { |f| f.js }
   end
 
   def edit
@@ -26,6 +23,10 @@ class TasksController < ApplicationController
   end
 
   def upload_file
+    file = attachment_params[:file]
+    is_uploaded_file = file.is_a? ActionDispatch::Http::UploadedFile
+    @task.attachments.create(file: file) if is_uploaded_file
+    redirect_to root_path
   end
 
   def destroy
@@ -37,6 +38,10 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:name, :description, attachments_attributes: [:file])
+  end
+
+  def attachment_params
+    params.require(:attachment).permit(:file)
   end
 
   def set_task
