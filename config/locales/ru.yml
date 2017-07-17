@@ -1,4 +1,16 @@
 ru:
+  time:
+    human_format: "чч:мм"
+    title: время
+    pickadate_format: 'H:i'
+    am: утра
+    formats:
+      default: ! '%a, %d %b %Y, %H:%M:%S %z'
+      long: ! '%d %B %Y, %H:%M'
+      short: ! '%d %b, %H:%M'
+      med: ! '%-d %B, %H:%M'
+      clock: ! '%H:%M'
+      digits: ! '%Y%m%d_%H:%M'
   activerecord:
     errors: &errors
       format: ! '%{attribute} %{message}'

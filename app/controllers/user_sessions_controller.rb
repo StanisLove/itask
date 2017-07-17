@@ -42,6 +42,6 @@ class UserSessionsController < ApplicationController
   private
 
   def login_form_params
-    params.require(:login_form).permit(:email, :password, :remember_me)
+    params.require(:login_form).permit(:email, :password)
   end
 end

@@ -1,4 +1,17 @@
 en:
+  time:
+    human_format: "hh:mm"
+    title: Time
+    pickadate_format: 'h:i a'
+    am: am
+    formats:
+      default: ! '%a, %d %b %Y %I:%M:%S %P %z'
+      long: ! '%B %d, %Y %I:%M %P'
+      short: ! '%d %b %I:%M %P'
+      med: ! '%d %B %I:%M %P'
+      clock: ! '%I:%M %P'
+      digits: ! '%Y%m%d_%H:%M'
+    pm: pm
   activerecord:
     errors: &errors
       format: ! '%{attribute} %{message}'

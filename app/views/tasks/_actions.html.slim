@@ -1,0 +1,10 @@
+button.btn.btn-default.btn-xs
+  span.glyphicon.glyphicon-pencil
+= button_to task_path(task), method: :delete, class: 'btn btn-default btn-xs', remote: true do
+  span.glyphicon.glyphicon-trash
+button.btn.btn-default.btn-xs.upload
+  span.glyphicon.glyphicon-save
+button.btn.btn-default.btn-xs
+  span.glyphicon.glyphicon-search
+= simple_form_for task.attachments.new, url: upload_file_task_path(task), remote: true do |f|
+  = f.input :file, label: false, input_html: { class: 'hidden upload-input' }
